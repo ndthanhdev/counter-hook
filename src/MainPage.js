@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { makeStyles, ThemeProvider } from '@material-ui/styles'
-import { increase, decrease, increaseAsync } from './store'
+import { increase, decrease, increaseAsync } from './store/actions'
 import FlexContainer from './FlexContainer'
 import Label from './Label'
 import Button from './Button'
@@ -27,8 +27,8 @@ function MainPage() {
 
   const dispatch = useDispatch()
 
-  const handleIncreate = () => dispatch(increase())
-  const handleDecreate = () => dispatch(decrease())
+  const handleIncrease = () => dispatch(increase())
+  const handleDecrease = () => dispatch(decrease())
   const handleIncreaseAsync = () => dispatch(increaseAsync())
 
   return (
@@ -40,8 +40,8 @@ function MainPage() {
     >
       <Label value={String(value)} />
       <FlexContainer className={classes.buttonGroup}>
-        <StyledButton text="Increase" onClick={handleIncreate} />
-        <StyledButton text="Decrease" onClick={handleDecreate} />
+        <StyledButton text="Increase" onClick={handleIncrease} />
+        <StyledButton text="Decrease" onClick={handleDecrease} />
         <StyledButton text="Increase Async" onClick={handleIncreaseAsync} />
       </FlexContainer>
     </FlexContainer>

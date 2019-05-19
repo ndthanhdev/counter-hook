@@ -18,5 +18,5 @@ export const increaseAsync = () => dispatch => {
 
   setTimeout(() => {
     dispatch(increase())
-  }, 1500)
+  }, 1000)
 }

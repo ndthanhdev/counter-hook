@@ -3,8 +3,8 @@ import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 import Button from './Button'
 
-test.skip('render', () => {
-  const tree = renderer.create(<Button />).toJSON()
+test('render', () => {
+  const tree = renderer.create(<Button text="test"w/>).toJSON()
   expect(tree).toMatchSnapshot()
 })
 
