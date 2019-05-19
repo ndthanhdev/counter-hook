@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import MainPage from './MainPage'
-import { initStore } from './store'
+import { initStore } from './store/utils'
 
 function App() {
   const store = initStore()
